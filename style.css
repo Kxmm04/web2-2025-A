@@ -18,12 +18,12 @@ header {
   height: 50px;
 }
 
-  .menu {
+.menu {
     display: flex;
     flex-wrap: nowrap;       /* ไม่ให้ขึ้นบรรทัดใหม่ */
     overflow-x: auto;        /* เลื่อนแนวนอน */
     background-color: #c00;
-    font-size: 16px;
+    font-size: 20px;
     padding: 25px;
     gap: 20px;
     scrollbar-width: none;   /* ซ่อน scrollbar บน Firefox */
@@ -31,7 +31,7 @@ header {
      list-style-type: none;
   }
 
-  .menu::-webkit-scrollbar {
+.menu::-webkit-scrollbar {
     display: none;           /* ซ่อน scrollbar บน Chrome */
   }
 
@@ -113,9 +113,12 @@ a {
 }
 
 .promo-desc {
-  font-size: 14px;
+ font-size: 14px;
   color: #555;
   margin-bottom: 12px;
+   display: -webkit-box;
+     overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .promo-price {
@@ -149,20 +152,32 @@ a {
 @media (max-width: 768px) {
   .promo-card {
     width: 100%;
-    flex-direction: column; /* แนวตั้งบนจอเล็ก */
-    text-align: center;
+    flex-direction: row;       /* เรียงแนวนอน */
+    align-items: center;       /* จัดกึ่งกลางแนวตั้ง */
+    text-align: left;
   }
 
   .promo-card img {
-    width: 100%;
+    width: 120px;              /* ✅ ขนาดภาพคงที่ เช่น 120px */
     height: auto;
+    object-fit: contain;       /* ✅ ไม่ตัดภาพ */
+    flex-shrink: 0;            /* ✅ ไม่ให้บีบภาพ */
   }
 
   .promo-content {
-    align-items: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
   }
 
   .price-add {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
+
+
+
+
+
