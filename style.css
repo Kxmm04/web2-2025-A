@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* ทำให้เต็มความสูงของหน้าจอ */
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #0a2e4f;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sidebar h2 {
+  margin-top: 20px;
+}
+
+.sidebar ul {
+  padding-left: 20px;
+}
+
+.main {
+  width: 70%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  box-sizing: border-box;
+  overflow-y: auto; /* เลื่อนเนื้อหาถ้าเกินจอ */
+}
+
+.main h1 {
+  margin-bottom: 5px;
+}
+
+.main h2 {
+  margin-top: 20px;
+  color: #003366;
+}
+
+.main h3 {
+  margin: 10px 0 5px;
+}
