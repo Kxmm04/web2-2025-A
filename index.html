@@ -1,75 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pizza Promo</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Hut Promotions</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
-    <img class="logo" src="https://1000logos.net/wp-content/uploads/2017/03/Pizza-Hut-Logo.png" alt="Pizza Hut" />
-    <div class="order-type">
-      <label><input type="radio" name="order" checked> Delivery</label>
-      <label><input type="radio" name="order"> Pickup</label>
+    <div class="left-group">
+      <img class="logo" src="images/logo.png" alt="Pizza Hut Logo"> <br>
+      <span class="order-label">Choose Store and Order Type</span>
+      <div class="order-type">
+        <input type="radio" id="pickup" name="order">
+        <label for="pickup">Pickup</label>
+
+        <input type="radio" id="delivery" name="order" checked>
+        <label for="delivery">Delivery</label>
+      </div>
     </div>
   </header>
 
-  <nav class="menu-bar">
-    <div class="menu-scroll">
-      <button class="active">Promotion</button>
-      <button>Combo</button>
-      <button>Pizza</button>
-      <button>Melts</button>
-      <button>Salad</button>
-      <button>Steak</button>
-      <button>Spaghetti</button>
-      <button>Appetizer</button>
-    </div>
-  </nav>
+  <br><br>
 
-  <main class="product-list">
-    <div class="product-card">
-      <img src="https://assets.pizzahut.co.th/images/products/promotion/PROMO_B1G1.png" alt="Pizza">
-      <div class="info">
-        <h3>Buy 1 Get 1 Free Pizza</h3>
-        <p>Every Toppings, Every Crust, Everyday</p>
-        <div class="price-row">
-          <span class="price old">฿ 399</span>
-          <span class="price">฿ 199</span>
+   <ul class="menu">
+    <li><a href="#promotion">Promotion</a></li>
+    <li><a href="#combo">Combo</a></li>
+    <li><a href="#pizza">Pizza</a></li>
+    <li><a href="#melts">Melts</a></li>
+    <li><a href="#salad">Salad</a></li>
+    <li><a href="#steak">Steak</a></li>
+    <li><a href="#spaghetti">Spaghetti</a></li>
+    <li><a href="#Appetizers">Appetizers</a></li>
+    <li><a href="#Wings">Wings</a></li>
+    <li><a href="#Drink & Dessert">Drink & Dessert</a></li>
+  </ul>
+</div>
+
+
+  <br><br>
+  <div class="promo-section">
+
+    <!-- PROMO 1 -->
+    <div class="promo-card">
+      <img src="images/p1.jpg" alt="Pizza">
+      <div class="promo-content">
+        <div>
+          <div class="promo-title">Hut Buy 1 Get 1 Free Pizza every toppings, every crust, everyday</div>
+          <div class="promo-desc">
+                Hut Buy 1 Get 1 Free with New crust Jumbo Cheesy Sausage with Crispy Bacon, Napoli Pizza with Airy Dough, and a variety of pizza options including Seafood, Supreme, Deluxe, and Lover Toppings.
+            </div>
         </div>
-        <button class="btn promo">Buy 1 Free 1</button>
-        <button class="btn add">Add</button>
+        <div class="price-add">
+          <span class="promo-price">Buy 1 Free 1</span>
+          <button class="btn">Add</button>
+        </div>
       </div>
     </div>
 
-    <div class="product-card">
-      <img src="https://assets.pizzahut.co.th/images/products/promotion/fries.png" alt="Fries">
-      <div class="info">
-        <h3>Buy 1 Get 1 French Fries</h3>
-        <p>Double the crunch. Enjoy now!</p>
-        <div class="price-row">
-          <span class="price old">฿ 158</span>
-          <span class="price">฿ 79</span>
+    <!-- PROMO 2 -->
+    <div class="promo-card">
+      <img src="images/p2.jpg" alt="Krypton Combo">
+      <div class="promo-content">
+        <div>
+          <div class="promo-title">The Krypton Combo</div>
+          <div class="promo-desc">
+                The Krypton Combo, supercharge your energy with 6 delicious menus: 2 Lover Pizzas, Chicken Steak, New Orleans Chicken, Spaghetti, 2 Pepsi glasses, along with a Superman Limited Edition box and enjoy yourself to the fullest, get 1 free movie ticket!
+            </div>
         </div>
-        <button class="btn add">Add</button>
+        <div class="price-add">
+          <span class="promo-price">฿699</span>
+          <span class="promo-old-price">฿1,143</span>
+          <button class="btn">Add</button>
+        </div>
       </div>
     </div>
 
-    <div class="product-card">
-      <img src="https://assets.pizzahut.co.th/images/products/promotion/macaroni.png" alt="Macaroni">
-      <div class="info">
-        <h3>Buy 1 Get 1 Baked Macaroni</h3>
-        <p>Baked Macaroni with creamy cheese.</p>
-        <div class="price-row">
-          <span class="price old">฿ 318</span>
-          <span class="price">฿ 159</span>
+    <!-- PROMO 3 -->
+    <div class="promo-card">
+      <img src="images/p3.jpg" alt="Fries">
+      <div class="promo-content">
+        <div>
+          <div class="promo-title">Buy 1 Get 1 French Fries</div>
+          <div class="promo-desc">Buy 1 French Fries, Get 1 Free! Double the crunch, double the fun! Grab your golden, crispy French Fries. </div>
         </div>
-        <button class="btn add">Add</button>
+        <div class="price-add">
+          <span class="promo-price">฿79</span>
+          <span class="promo-old-price">฿158</span>
+          <button class="btn">Add</button>
+        </div>
       </div>
     </div>
-  </main>
 
+    <div class="promo-card">
+      <img src="images/p4.jpg" alt=" Baked Macaroni">
+      <div class="promo-content">
+        <div>
+          <div class="promo-title">Buy 1 get 1 Baked Macaroni</div>
+          <div class="promo-desc">Buy 1 get 1 free Baked Macaroni delicious with Baked Macaroni in White Cream Sauce, Baked Macaroni Cheesy Shrimp and Baked Macaroni Italian Chicken super delicious cheese baked menu</div>
+        </div>
+        <div class="price-add">
+          <span class="promo-price">฿79</span>
+          <span class="promo-old-price">฿158</span>
+          <button class="btn">Add</button>
+        </div>
+      </div>
+    </div>
+
+     <div class="promo-card">
+      <img src="images/p5.jpg" alt=" Baked Macaroni">
+      <div class="promo-content">
+        <div>
+          <div class="promo-title">Hut 1 Free 1 Beverage 16oz.</div>
+          <div class="promo-desc">Buy Pepsi, Pepsi Zero Sugar and Lemon Iced Tea 16oz. Get free 1 cup.</div>
+        </div>
+        <div class="price-add">
+          <span class="promo-price">฿79</span>
+          <span class="promo-old-price">฿158</span>
+          <button class="btn">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </body>
+
 </html>

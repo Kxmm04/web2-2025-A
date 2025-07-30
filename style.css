@@ -1,54 +1,168 @@
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
 }
 
-.container {
+header {
+  background-color: #fff;
+  padding: 10px 20px;
   display: flex;
-  height: 100vh; /* ทำให้เต็มความสูงของหน้าจอ */
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
 }
 
-.sidebar {
-  width: 30%;
-  background-color: #0a2e4f;
+.logo {
+  width: auto;
+  height: 50px;
+}
+
+  .menu {
+    display: flex;
+    flex-wrap: nowrap;       /* ไม่ให้ขึ้นบรรทัดใหม่ */
+    overflow-x: auto;        /* เลื่อนแนวนอน */
+    background-color: #c00;
+    font-size: 16px;
+    padding: 25px;
+    gap: 20px;
+    scrollbar-width: none;   /* ซ่อน scrollbar บน Firefox */
+    justify-content: center; 
+     list-style-type: none;
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none;           /* ซ่อน scrollbar บน Chrome */
+  }
+
+a {
   color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.order-label {
+  font-size: 16px;
+  color: #333;
+  margin-right: 20px;
+}
+
+.order-type {
+  display: inline-flex;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.order-type input[type="radio"] {
+  display: none;
+}
+
+.order-type label {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #eee;
+  color: #333;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.order-type input[type="radio"]:checked + label {
+  background-color: #c00;
+  color: white;
+}
+
+.promo-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 20px;
-  box-sizing: border-box;
+  gap: 20px;
 }
 
-.sidebar img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: block;
-  margin-bottom: 20px;
+.promo-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 48%; /* 👈 ให้แสดง 2 การ์ดในหนึ่งแถว */
+  display: flex;
+  overflow: hidden;
 }
 
-.sidebar h2 {
-  margin-top: 20px;
+
+.promo-card img {
+  width: 180px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-.sidebar ul {
-  padding-left: 20px;
+.promo-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
-.main {
-  width: 70%;
-  padding: 20px;
-  background-color: #f4f4f4;
-  box-sizing: border-box;
-  overflow-y: auto; /* เลื่อนเนื้อหาถ้าเกินจอ */
+.promo-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-.main h1 {
-  margin-bottom: 5px;
+.promo-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
 }
 
-.main h2 {
-  margin-top: 20px;
-  color: #003366;
+.promo-price {
+  color: #c00;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-.main h3 {
-  margin: 10px 0 5px;
+.promo-old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.price-add {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #c00;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .promo-card {
+    width: 100%;
+    flex-direction: column; /* แนวตั้งบนจอเล็ก */
+    text-align: center;
+  }
+
+  .promo-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .promo-content {
+    align-items: center;
+  }
+
+  .price-add {
+    justify-content: center;
+  }
 }
