@@ -18,7 +18,7 @@ header {
   height: 50px;
 }
 
-.menu {
+.bar {
     display: flex;
     flex-wrap: nowrap;       /* ไม่ให้ขึ้นบรรทัดใหม่ */
     overflow-x: auto;        /* เลื่อนแนวนอน */
@@ -31,7 +31,7 @@ header {
      list-style-type: none;
   }
 
-.menu::-webkit-scrollbar {
+.bar::-webkit-scrollbar {
     display: none;           /* ซ่อน scrollbar บน Chrome */
   }
 
