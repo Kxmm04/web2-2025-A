@@ -24,15 +24,9 @@ header {
     overflow-x: auto;        /* เลื่อนแนวนอน */
     background-color: #c00;
     font-size: 20px;
-    padding: 25px;
-    gap: 20px;
-    scrollbar-width: none;   /* ซ่อน scrollbar บน Firefox */
-    justify-content: center; 
+    padding: 20px;
+    gap: 5%;
      list-style-type: none;
-  }
-
-.bar::-webkit-scrollbar {
-    display: none;           /* ซ่อน scrollbar บน Chrome */
   }
 
 a {
