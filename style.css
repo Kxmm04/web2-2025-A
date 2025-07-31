@@ -20,13 +20,12 @@ header {
 
 .bar {
     display: flex;
-    flex-wrap: nowrap;       /* ไม่ให้ขึ้นบรรทัดใหม่ */
-    overflow-x: auto;        /* เลื่อนแนวนอน */
+    overflow-x: auto;       
     background-color: #c00;
     font-size: 20px;
     padding: 20px;
     gap: 5%;
-     list-style-type: none;
+    list-style-type: none;
   }
 
 a {
