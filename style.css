@@ -18,21 +18,9 @@ header {
   height: 50px;
 }
 
-.bar {
-    display: flex;
-    overflow-x: auto;       
-    background-color: #c00;
-    font-size: 20px;
-    padding: 20px;
-    gap: 5%;
-    list-style-type: none;
-  }
-
-a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  font-weight: bold;
+.right-header {
+  display: flex;
+  align-items: center;
 }
 
 .order-label {
@@ -65,6 +53,23 @@ a {
   background-color: #c00;
   color: white;
 }
+.bar {
+    display: flex;
+    overflow-x: auto;       
+    background-color: #c00;
+    font-size: 20px;
+    padding: 20px;
+    gap: 5%;
+    list-style-type: none;
+  }
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
 
 .promo-section {
   display: flex;
