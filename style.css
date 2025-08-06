@@ -14,13 +14,13 @@ header {
 }
 
 .logo {
-  width: auto;
   height: 50px;
 }
 
 .right-header {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .order-label {
@@ -53,15 +53,16 @@ header {
   background-color: #c00;
   color: white;
 }
+
 .bar {
-    display: flex;
-    overflow-x: auto;       
-    background-color: #c00;
-    font-size: 20px;
-    padding: 20px;
-    gap: 5%;
-    list-style-type: none;
-  }
+  display: flex;
+  overflow-x: auto;
+  background-color: #c00;
+  font-size: 20px;
+  padding: 20px;
+  gap: 5%;
+  list-style-type: none;
+}
 
 a {
   color: white;
@@ -70,11 +71,10 @@ a {
   font-weight: bold;
 }
 
-
 .promo-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start; /* ✅ จากเดิม: center → เป็น flex-start */
   padding: 20px;
   gap: 20px;
 }
@@ -83,11 +83,10 @@ a {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 48%; /* 👈 ให้แสดง 2 การ์ดในหนึ่งแถว */
+  width: 48%;
   display: flex;
   overflow: hidden;
 }
-
 
 .promo-card img {
   width: 180px;
@@ -111,12 +110,14 @@ a {
 }
 
 .promo-desc {
- font-size: 14px;
+  font-size: 14px;
   color: #555;
   margin-bottom: 12px;
-   display: -webkit-box;
-     overflow: hidden;
+  display: -webkit-box;
+  overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .promo-price {
@@ -147,35 +148,56 @@ a {
   cursor: pointer;
   font-size: 14px;
 }
-@media (max-width: 768px) {
+
+/* ✅ Responsive สำหรับมือถือและไอแพด */
+@media (max-width: 1024px) {
   .promo-card {
     width: 100%;
-    flex-direction: row;       /* เรียงแนวนอน */
-    align-items: center;       /* จัดกึ่งกลางแนวตั้ง */
+    flex-direction: row;
+    align-items: center;
     text-align: left;
   }
 
   .promo-card img {
-    width: 120px;              /* ✅ ขนาดภาพคงที่ เช่น 120px */
-    height: auto;
-    object-fit: contain;       /* ✅ ไม่ตัดภาพ */
-    flex-shrink: 0;            /* ✅ ไม่ให้บีบภาพ */
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
   }
 
   .promo-content {
     padding: 10px;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 1;
+  }
+
+  .promo-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .promo-desc {
+    font-size: 13px;
+    margin-bottom: 8px;
   }
 
   .price-add {
     justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .promo-price {
+    font-size: 15px;
+  }
+
+  .promo-old-price {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 13px;
   }
 }
-
-
-
-
-
